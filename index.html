@@ -1,8 +1,20 @@
 <html>
 <head>
-	<title>Angular Eating List (Diet List Really)</title>
+	<title>Angular Grocerty List (Diet List Really)</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/diet.css">
 </head>
-<body>
-
+<body ng-app>
+	<h2 align="center">The Diet Grocery List (with a few temptations)</h2>
+	<div ng-controller="dietCtrl" class="main">
+		<table class="table table-striped">
+			<tr ng-repeat="item in groceryList" ng-class="{healthy: item.healthy === true, bought: item.bought === true, purchased: gotten}">
+				<td><input type="checkbox" ng-checked="{{item.bought}}" ng-model="gotten" ng-model="getAgain"/></td>
+				<td>{{item.food}}</td>
+			</tr>
+		</table>
+	</div>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+	 <script type="text/javascript" src="/js/diet.js"></script>
 </body>
 </html>
