@@ -1,0 +1,19 @@
+div.main {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr.bought {
+	opacity: 0.6;
+	text-decoration: line-through;
+}
+
+tr.healthy {
+	color: green;
+}
+
+tr.purchased {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
